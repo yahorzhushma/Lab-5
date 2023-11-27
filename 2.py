@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("test.csv", sep=",")
+dataset = pd.read_csv("test.csv", sep=",")
+data = pd.DataFrame(dataset).head(1000)
 missdata = data.isnull().sum()
 
 plt.figure(figsize=(12, 6))
